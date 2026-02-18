@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puro Dropshipping | Luxury Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>PURO DROPSHIPPING</h1>
+    </header>
+
+    <main class="main-layout">
+        <div class="vertical-col" onclick="openModal('modalRelojes')">
+            <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200');"></div>
+            <div class="content">
+                <h2>Relojes</h2>
+                <p class="view-more">VER COLECCIÓN</p>
+            </div>
+        </div>
+
+        <div class="vertical-col insta-box">
+            <div class="content">
+                <p class="tagline">ASESORÍA VIP</p>
+                <h2 class="consult-title">Consúltanos</h2>
+                <a href="https://www.instagram.com/purodropshipping?igsh=MWFhZzd1czQ5YzBncQ==" target="_blank" class="insta-btn">Escribinos</a>
+            </div>
+        </div>
+
+        <div class="vertical-col" onclick="openModal('modalJoyeria')">
+            <div class="bg-img" style="background-image: url('https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1200');"></div>
+            <div class="content">
+                <h2>Joyería</h2>
+                <p class="view-more">VER COLECCIÓN</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="modalRelojes" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Colección Relojes</h2>
+                <span class="close-btn" onclick="closeModal('modalRelojes')">&times;</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://www.casio.com/content/dam/casio/product-info/locales/ph/en/timepiece/product/watch/M/MT/MTP/mtp-1302dd-9av/assets/MTP-1302DD-9AV.png.transform/main-visual-sp/image.png" alt="Casio MTP">
+                    <h3>Casio MTP Tiffany Blue</h3>
+                    <p class="price">$75.00</p>
+                    <button class="btn-comprar" onclick="abrirCheckout('Casio MTP Tiffany Blue')">COMPRAR</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=600" alt="Reloj">
+                    <h3>Classic Silver</h3>
+                    <p class="price">$8.200</p>
+                    <button class="btn-comprar" onclick="abrirCheckout('Classic Silver')">COMPRAR</button>
+                </div>
+            </div>
+
+            <div id="checkoutSector" class="checkout-section">
+                <h3>Datos de Envío</h3>
+                <p id="itemSeleccionado" style="font-weight: bold; margin-bottom: 15px; color: #d4af37;"></p>
+                <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
+                <input type="text" id="cp" placeholder="Código Postal" required>
+                <input type="text" id="ciudad" placeholder="Ciudad" required>
+                <input type="text" id="provincia" placeholder="Provincia" required>
+                <input type="tel" id="telefono" placeholder="Número de Teléfono" required>
+                <button class="btn-enviar" onclick="enviarInformacion()">ENVIAR A WHATSAPP</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalJoyeria" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Colección Joyería</h2>
+                <span class="close-btn" onclick="closeModal('modalJoyeria')">&times;</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=600" alt="Joya">
+                    <h3>Cadena Cubana 18k</h3>
+                    <p class="price">$4.500</p>
+                    <button class="btn-comprar" onclick="abrirCheckout('Cadena Cubana 18k')">COMPRAR</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598560912005-5976593dc88b?q=80&w=600" alt="Joya">
+                    <h3>Pulsera Diamond</h3>
+                    <p class="price">$3.100</p>
+                    <button class="btn-comprar" onclick="abrirCheckout('Pulsera Diamond')">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 PURO DROPSHIPPING | LUXURY BOUTIQUE
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
