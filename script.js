@@ -35,8 +35,8 @@ function abrirCheckout(producto) {
 }
 
 function enviarInformacion() {
-    // Tu número de WhatsApp (incluye código de país sin el +)
-    const telefonoWS = "5493751307066"; 
+    // LINK DE TU QR DE WHATSAPP
+    const baseLink = "https://wa.me/qr/VMZA3UJHUCOTO1"; 
     
     const item = document.getElementById('itemSeleccionado').innerText;
     const nombre = document.getElementById('nombre').value;
@@ -50,6 +50,7 @@ function enviarInformacion() {
         return;
     }
 
+    // Estructura del mensaje
     const mensaje = "💎 *NUEVO PEDIDO - PURO DROPSHIPPING* 💎\n\n" +
                     "✨ *Producto:* " + item + "\n" +
                     "--------------------------------\n" +
@@ -61,7 +62,8 @@ function enviarInformacion() {
                     "--------------------------------\n" +
                     "Espero su confirmación. Gracias!";
 
-    const whatsappLink = "https://wa.me/" + telefonoWS + "?text=" + encodeURIComponent(mensaje);
+    // Para los links de QR, añadimos el texto como un parámetro de consulta
+    const whatsappLink = baseLink + "?text=" + encodeURIComponent(mensaje);
     
     window.open(whatsappLink, '_blank');
 }
